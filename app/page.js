@@ -17,7 +17,7 @@ const page = () => {
   if(mainTask.length>0)
       renderTask = mainTask.map((t,i)=>{
         return ( 
-          <div className="flex justify-between mb-5">
+          <div className="flex justify-between mb-5 ">
             <h5 className="text-xl font-semibold">{t.title}</h5>
             <h5 className="text-xl font-semibold">{t.desc}</h5>
           </div>
