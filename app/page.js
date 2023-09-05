@@ -1,10 +1,12 @@
 "use client"
+import { list } from "postcss";
 import React, { useState } from "react";
 
 const page = () => {
   const [title, settitle] = useState("")
   const [desc, setdesc] = useState("")
   const [mainTask, setmainTask] = useState([])
+  const [deleteTask, setdeleteTask] = useState([])
   const onSubmitHandler = (e)=>{
     e.preventDefault()
     setmainTask([...mainTask, {title, desc}])
@@ -17,27 +19,30 @@ const page = () => {
   if(mainTask.length>0)
       renderTask = mainTask.map((t,i)=>{
         return ( 
-          <div className="flex justify-between mb-5 ">
-            <h5 className="text-xl font-semibold">{t.title}</h5>
-            <h5 className="text-xl font-semibold">{t.desc}</h5>
-          </div>
+          <li key={i} className="flex items-center justify-between">
+            <div id="section" className="">
+              <h5 className="text-2xl font-semibold">{t.title}</h5>
+              <h5 className="text-xl font-semibold">{t.desc}</h5>
+              <button className=' bg-red-400 text text-white py-2 px-4 font:bold rounded'>Delete</button>
+            </div>
+          </li>
         )
       })
   return (
     <>
-    <h1 className='bg-black text-white p-5 text-5xl 
+    <h1 id="title" className=' text-white p-5 text-5xl  
     font=bold text-center'>My Todo App</h1>
 
       <form onSubmit={onSubmitHandler}>
-        <input type="text" className='text-2xl border-zinc-800 
-        m-10 border-2 py-4 px-2 font-bold corner' placeholder='enter text here'
+        <input id="textInput" type="text" className='text-2xl border-zinc-800 
+        m-10 border-2 py-4 px-2 font-bold corner' placeholder='enter task here'
         value={title}
         onChange={(e)=>{
           settitle(e.target.value)
         }}>
         </input>
       
-        <input type="text" className='text-2xl border-zinc-800 
+        <input id="textInput" type="text" className='text-2xl border-zinc-800 
         m-10 border-2 py-4 px-2 font-bold' placeholder='enter discription here'
         value={desc}
         onChange={(e)=>{
