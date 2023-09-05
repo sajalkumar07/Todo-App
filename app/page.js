@@ -12,7 +12,13 @@ const page = () => {
     setmainTask([...mainTask, {title, desc}])
     settitle("")
     setdesc("")
-    console.log(mainTask)
+    console.log(mainTask);
+  };
+
+  const deleteHandler = (i)=>{
+    let copytask = [...mainTask]
+    copytask.splice(i,1)
+    setmainTask(copytask)
   }
 
   let renderTask = <h2>No Task Available</h2>
@@ -23,7 +29,13 @@ const page = () => {
             <div id="section" className="">
               <h5 className="text-2xl font-semibold">{t.title}</h5>
               <h5 className="text-xl font-semibold">{t.desc}</h5>
-              <button className=' bg-red-400 text text-white py-2 px-4 font:bold rounded'>Delete</button>
+              <button 
+              onClick={()=>
+                deleteHandler(i) 
+              }  
+              className=' bg-red-400 text text-white py-2 px-4 font:bold rounded'>
+              Delete
+              </button>
             </div>
           </li>
         )
