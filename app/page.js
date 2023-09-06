@@ -1,6 +1,7 @@
 "use client"
 import { list } from "postcss";
 import React, { useState } from "react";
+import "./globals.css"; // Import your CSS file for styling
 
 const page = () => {
   const [title, settitle] = useState("")
@@ -27,8 +28,8 @@ const page = () => {
         return ( 
           <li key={i} className="flex items-center justify-between">
             <div id="section" className="">
-              <h5 className="text-2xl font-semibold">{t.title}</h5>
-              <h5 className="text-xl font-semibold">{t.desc}</h5>
+              <h5 className="text-xl font-semibold">{t.title}</h5>
+              {/* <h5 className="text-xl font-semibold">{t.desc}</h5> */}
               <button 
               onClick={()=>
                 deleteHandler(i) 
@@ -54,13 +55,13 @@ const page = () => {
         }}>
         </input>
       
-        <input id="textInput" type="text" className='text-2xl border-zinc-800 
+        {/* <input id="textInput" type="text" className='text-2xl border-zinc-800 
         m-10 border-2 py-4 px-2 font-bold' placeholder='enter discription here'
         value={desc}
         onChange={(e)=>{
           setdesc(e.target.value)
         }}>
-        </input> 
+        </input>  */}
 
         <button className='bg-black text text-white py-4 px-4
         font:bold rounded text-2xl'>

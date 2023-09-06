@@ -19,3 +19,38 @@
 #textInput{
     width: 39%;
 }
+/* styles.css */
+
+/* Default styles for larger screens */
+#title {
+    font-size: 5rem;
+  }
+  
+  .text-2xl {
+    font-size: 2rem;
+  }
+  
+  /* Media query for screens with a maximum width of 768px (tablets and smaller) */
+  @media screen and (max-width: 768px) {
+    #title {
+      font-size: 3rem;
+    }
+  
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Media query for screens with a maximum width of 480px (phones and smaller) */
+  @media screen and (max-width: 480px) {
+    #title {
+      font-size: 2rem;
+    }
+  
+    .text-2xl {
+      font-size: 1rem;
+    }
+  
+    /* Add more responsive styles as needed */
+  }
+  
