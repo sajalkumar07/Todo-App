@@ -44,7 +44,7 @@ const page = () => {
   return (
     <>
     <h1 id="title" className=' text-white p-5 text-5xl  
-    font=bold text-center'>My Todo App</h1>
+    font=bold text-center'>Task Box</h1>
 
       <form onSubmit={onSubmitHandler}>
         <input id="textInput" type="text" className='text-2xl border-zinc-800 

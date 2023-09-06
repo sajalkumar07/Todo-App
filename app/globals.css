@@ -23,17 +23,17 @@
 
 /* Default styles for larger screens */
 #title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   
   .text-2xl {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   /* Media query for screens with a maximum width of 768px (tablets and smaller) */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 750px) {
     #title {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   
     .text-2xl {
@@ -42,7 +42,7 @@
   }
   
   /* Media query for screens with a maximum width of 480px (phones and smaller) */
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 450px) {
     #title {
       font-size: 2rem;
     }
