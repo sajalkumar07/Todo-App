@@ -26,15 +26,14 @@ const page = () => {
   if(mainTask.length>0)
       renderTask = mainTask.map((t,i)=>{
         return ( 
-          <li key={i} className="flex items-center justify-between">
+          <li key={i} id="textList" className="">
             <div id="section" className="">
-              <h5 className="text-xl font-semibold">{t.title}</h5>
-              {/* <h5 className="text-xl font-semibold">{t.desc}</h5> */}
-              <button 
+              <h5 className="">{t.title}</h5>
+              <button id="deleteButton"
               onClick={()=>
                 deleteHandler(i) 
               }  
-              className=' bg-red-400 text text-white py-2 px-4 font:bold rounded'>
+              className=''>
               Delete
               </button>
             </div>
@@ -43,28 +42,17 @@ const page = () => {
       })
   return (
     <>
-    <h1 id="title" className=' text-white p-5 text-5xl  
-    font=bold text-center'>Task Box</h1>
+    <h1 id="title" className=''>Task Box</h1>
 
       <form onSubmit={onSubmitHandler}>
-        <input id="textInput" type="text" className='text-2xl border-zinc-800 
-        m-10 border-2 py-4 px-2 font-bold corner' placeholder='enter task here'
+        <input id="textInput" type="text" className='' placeholder='enter task here'
         value={title}
         onChange={(e)=>{
           settitle(e.target.value)
         }}>
         </input>
-      
-        {/* <input id="textInput" type="text" className='text-2xl border-zinc-800 
-        m-10 border-2 py-4 px-2 font-bold' placeholder='enter discription here'
-        value={desc}
-        onChange={(e)=>{
-          setdesc(e.target.value)
-        }}>
-        </input>  */}
 
-        <button className='bg-black text text-white py-4 px-4
-        font:bold rounded text-2xl'>
+        <button id="addTaskBtn" className=''>
             Add Task
         </button>
       </form>
