@@ -5,6 +5,8 @@
   padding: 5px;
   color: #fff;
   text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 #section{
@@ -13,11 +15,8 @@
   text-align: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 0px 50px 20px 30px;
 }
-
 
 #textInput{
   width: 39%;
@@ -35,9 +34,9 @@
   text-align: center;
   font-size: 20px;
   border-radius: 3px;
+  border: 2px solid black;
 }
   
-
 #textList{
   display: flex;
   justify-content: space-between;
@@ -47,6 +46,9 @@ h5{
   font-size: 20px;
   font-weight: 700;
 }
+h2{
+  margin: 30px;
+}
 
 #deleteButton{
   padding: 10px 10px 10px 10px;
@@ -54,6 +56,8 @@ h5{
   color: #fff;
   font-style: 700;
   border-radius: 5px;
+  border: 2px solid red;
+  text-decoration: none;
 }
 
   @media screen and (max-width: 750px) {
